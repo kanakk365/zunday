@@ -13,7 +13,7 @@ const Navbar = () => {
                     <input
                         type="text"
                         placeholder="Search"
-                        className="pl-10 pr-4 py-2.5 bg-gray-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#5A4AD1]/20 w-64 text-gray-600 placeholder-gray-400"
+                        className="pl-10 pr-4 py-2.5 bg-gray-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#4B3DBF]/20 w-64 text-gray-600 placeholder-gray-400"
                     />
                 </div>
 
@@ -26,7 +26,7 @@ const Navbar = () => {
                 </button>
 
                 {/* Avatar */}
-                <div className="w-10 h-10 rounded-full bg-[#5A4AD1] flex items-center justify-center text-white font-bold text-lg cursor-pointer hover:opacity-90 transition-opacity">
+                <div className="w-10 h-10 rounded-full bg-[#4B3DBF] flex items-center justify-center text-white font-bold text-lg cursor-pointer hover:opacity-90 transition-opacity">
                     A
                 </div>
             </div>

@@ -36,7 +36,7 @@ const dataPie = [
     { name: "Dineout", value: 300 },
 ];
 
-const COLORS = ["#5A4AD1", "#8B80F9", "#D1D5DB"];
+const COLORS = ["#4B3DBF", "#8B80F9", "#D1D5DB"];
 
 const stats = [
     {
@@ -105,8 +105,8 @@ export default function DashboardPage() {
                             <h3 className="text-2xl font-bold text-gray-900">{stat.value}</h3>
                             <div
                                 className={`flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded-md ${stat.isPositive
-                                        ? "text-emerald-500 bg-emerald-50"
-                                        : "text-red-500 bg-red-50"
+                                    ? "text-emerald-500 bg-emerald-50"
+                                    : "text-red-500 bg-red-50"
                                     }`}
                             >
                                 {stat.change}
@@ -176,10 +176,10 @@ export default function DashboardPage() {
                                 <Line
                                     type="monotone"
                                     dataKey="value"
-                                    stroke="#5A4AD1"
+                                    stroke="#4B3DBF"
                                     strokeWidth={2}
                                     dot={false}
-                                    activeDot={{ r: 6, fill: "#5A4AD1", strokeWidth: 0 }}
+                                    activeDot={{ r: 6, fill: "#4B3DBF", strokeWidth: 0 }}
                                 />
                             </LineChart>
                         </ResponsiveContainer>
@@ -239,7 +239,7 @@ export default function DashboardPage() {
                     <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wider text-sm">
                         Recent Orders
                     </h3>
-                    <button className="bg-[#5A4AD1] text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-[#4839B0] transition-colors">
+                    <button className="bg-[#4B3DBF] text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-[#3D2F9F] transition-colors">
                         View all
                     </button>
                 </div>

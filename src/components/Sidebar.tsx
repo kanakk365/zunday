@@ -60,9 +60,8 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`h-screen bg-white border-r border-gray-100 flex flex-col transition-all duration-300 relative ${
-        collapsed ? "w-20" : "w-64"
-      }`}
+      className={`h-screen bg-white border-r border-gray-100 flex flex-col transition-all duration-300 relative ${collapsed ? "w-20" : "w-64"
+        }`}
     >
       {/* Collapse Button */}
       <button
@@ -74,10 +73,10 @@ const Sidebar = () => {
 
       {/* Logo */}
       <div className="p-6 flex items-center justify-center">
-        <h1 className={`text-2xl font-bold text-[#5A4AD1] transition-opacity duration-300 ${collapsed ? "opacity-0 hidden" : "opacity-100"}`}>
+        <h1 className={`text-2xl font-bold text-[#4B3DBF] transition-opacity duration-300 ${collapsed ? "opacity-0 hidden" : "opacity-100"}`}>
           Zunday
         </h1>
-        {collapsed && <span className="text-2xl font-bold text-[#5A4AD1]">Z</span>}
+        {collapsed && <span className="text-2xl font-bold text-[#4B3DBF]">Z</span>}
       </div>
 
       {/* Menu */}
@@ -86,11 +85,10 @@ const Sidebar = () => {
           <div key={index}>
             <Link
               href={item.href}
-              className={`flex items-center justify-between px-4 py-3 rounded-xl transition-colors ${
-                item.active
-                  ? "bg-[#5A4AD1] text-white shadow-lg shadow-indigo-200"
-                  : "text-gray-500 hover:bg-gray-50 hover:text-[#5A4AD1]"
-              }`}
+              className={`flex items-center justify-between px-4 py-3 rounded-xl transition-colors ${item.active
+                  ? "bg-[#4B3DBF] text-white shadow-lg shadow-indigo-200"
+                  : "text-gray-500 hover:bg-gray-50 hover:text-[#4B3DBF]"
+                }`}
             >
               <div className="flex items-center gap-3">
                 <span className={item.active ? "text-white" : "text-gray-500"}>
@@ -109,7 +107,7 @@ const Sidebar = () => {
       {/* User Profile */}
       <div className="p-4 border-t border-gray-100">
         <div className={`flex items-center gap-3 ${collapsed ? "justify-center" : ""}`}>
-          <div className="w-10 h-10 rounded-full bg-[#5A4AD1] flex items-center justify-center text-white font-bold text-lg shrink-0">
+          <div className="w-10 h-10 rounded-full bg-[#4B3DBF] flex items-center justify-center text-white font-bold text-lg shrink-0">
             A
           </div>
           {!collapsed && (
