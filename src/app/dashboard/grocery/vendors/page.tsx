@@ -2,8 +2,10 @@
 
 import React from "react";
 import { Search, SlidersHorizontal, Plus, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function GroceryVendorsPage() {
+    const router = useRouter();
     const vendors = Array(7).fill({
         name: "Fresh Mart Supermarket",
         owner: "Rajesh Kumar",
@@ -21,7 +23,10 @@ export default function GroceryVendorsPage() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-[#4B3DBF] text-white rounded-lg text-sm font-medium hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-200">
+                    <button
+                        onClick={() => router.push("/dashboard/grocery/vendors/create")}
+                        className="flex items-center gap-2 px-4 py-2 bg-[#4B3DBF] text-white rounded-lg text-sm font-medium hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-200 cursor-pointer"
+                    >
                         <Plus size={16} />
                         Add Grocery Vendor
                     </button>
@@ -35,7 +40,7 @@ export default function GroceryVendorsPage() {
                         />
                     </div>
 
-                    <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors cursor-pointer">
                         <SlidersHorizontal size={16} />
                         Filters
                     </button>
@@ -61,8 +66,11 @@ export default function GroceryVendorsPage() {
                                 <td className="py-6 text-sm text-gray-600">{vendor.owner}</td>
                                 <td className="py-6 text-sm text-gray-600">{vendor.phone}</td>
                                 <td className="py-6 text-sm text-gray-600">{vendor.city}</td>
-                                <td className="py-6 pr-8 text-center">
-                                    <button className="px-6 py-2 bg-[#4B3DBF] text-white text-xs font-medium rounded-full hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-200 min-w-[80px]">
+                                <td className="py-4 pl-4 pr-8 text-right rounded-r-lg">
+                                    <button
+                                        onClick={() => router.push(`/dashboard/grocery/vendors/${index + 1}`)}
+                                        className="px-6 py-2 bg-[#4B3DBF] text-white text-xs font-semibold rounded-full hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-100 cursor-pointer"
+                                    >
                                         View
                                     </button>
                                 </td>
@@ -76,10 +84,10 @@ export default function GroceryVendorsPage() {
             <div className="flex items-center justify-between pt-2">
                 <p className="text-sm text-gray-500 font-medium">Showing 01 of 10</p>
                 <div className="flex items-center gap-2">
-                    <button className="w-8 h-8 flex items-center justify-center bg-[#4B3DBF] text-white rounded-lg hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-200">
+                    <button className="w-8 h-8 flex items-center justify-center bg-[#4B3DBF] text-white rounded-lg hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-200 cursor-pointer">
                         <ChevronLeft size={16} />
                     </button>
-                    <button className="w-8 h-8 flex items-center justify-center bg-[#4B3DBF] text-white rounded-lg hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-200">
+                    <button className="w-8 h-8 flex items-center justify-center bg-[#4B3DBF] text-white rounded-lg hover:bg-[#3d31a0] transition-colors shadow-sm shadow-indigo-200 cursor-pointer">
                         <ChevronRight size={16} />
                     </button>
                 </div>
