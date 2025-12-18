@@ -67,7 +67,11 @@ const Sidebar = () => {
       icon: <Coffee size={20} />,
       href: "#",
       hasSubmenu: true,
-      submenu: []
+      submenu: [
+        { title: "Restaurant List", href: "/dashboard/dineout/restaurants" },
+        { title: "Booking List", href: "/dashboard/dineout/bookings" },
+        { title: "Payouts", href: "/dashboard/dineout/payouts" },
+      ]
     },
   ];
 
