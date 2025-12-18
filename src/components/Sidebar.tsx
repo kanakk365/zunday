@@ -55,7 +55,12 @@ const Sidebar = () => {
       icon: <Utensils size={20} />,
       href: "#",
       hasSubmenu: true,
-      submenu: []
+      submenu: [
+        { title: "Food Vendors", href: "/dashboard/order-food/vendors" },
+        { title: "Food Items Menu", href: "/dashboard/order-food/items" },
+        { title: "Food Orders", href: "/dashboard/order-food/orders" },
+        { title: "Food Payouts", href: "/dashboard/order-food/payouts" },
+      ]
     },
     {
       title: "Dineout",
