@@ -171,20 +171,22 @@ const Sidebar = () => {
 
       {/* User Profile */}
       <div className="p-4 border-t border-gray-100">
-        <div className={`flex items-center gap-3 ${collapsed ? "justify-center" : ""}`}>
-          <div className="w-10 h-10 rounded-full bg-[#4B3DBF] flex items-center justify-center text-white font-bold text-lg shrink-0">
-            A
-          </div>
-          {!collapsed && (
-            <div className="flex-1 min-w-0">
-              <p className="text-xs text-gray-400">Welcome 👋</p>
-              <p className="text-sm font-bold text-gray-900 truncate">Andrew</p>
+        <Link href="/dashboard/profile">
+          <div className={`flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors ${collapsed ? "justify-center" : ""}`}>
+            <div className="w-10 h-10 rounded-full bg-[#4B3DBF] flex items-center justify-center text-white font-bold text-lg shrink-0">
+              A
             </div>
-          )}
-          {!collapsed && (
-            <ChevronRight size={16} className="text-gray-400" />
-          )}
-        </div>
+            {!collapsed && (
+              <div className="flex-1 min-w-0">
+                <p className="text-xs text-gray-400">Welcome 👋</p>
+                <p className="text-sm font-bold text-gray-900 truncate">Andrew</p>
+              </div>
+            )}
+            {!collapsed && (
+              <ChevronRight size={16} className="text-gray-400" />
+            )}
+          </div>
+        </Link>
       </div>
     </aside>
   );
